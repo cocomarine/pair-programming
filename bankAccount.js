@@ -51,3 +51,15 @@ class SavingsAccount extends BankAccount {
         return interest;
     }
 }
+
+let account = new BankAccount('John Doe');
+account.deposit(100);
+console.log(account.balance); // 100
+
+let currentAccount = new CurrentAccount('John Doe', 100, 100, 50);
+currentAccount.withdraw(150);
+console.log(currentAccount.balance); // -50
+
+let savingsAccount = new SavingsAccount('John Doe', 100, 100, 10);
+savingsAccount.addInterest();
+console.log(savingsAccount.balance); // 110
